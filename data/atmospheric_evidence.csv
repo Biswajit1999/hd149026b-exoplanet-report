@@ -1,0 +1,5 @@
+species,status,evidence,basis,source_label,source_url
+CO2,reported detection,strong 4.3-micron feature,JWST emission-spectrum modeling,"Bean et al. 2023, Nature; Gagnebin et al. 2024",https://doi.org/10.1038/s41586-023-05984-y
+H2O,reported detection,absorption features,JWST emission-spectrum modeling,"Bean et al. 2023, Nature; Gagnebin et al. 2024",https://doi.org/10.1038/s41586-023-05984-y
+VO,model-dependent hint,circumstantial,later self-consistent atmosphere models,"Bean et al. 2023, Nature; Gagnebin et al. 2024",https://doi.org/10.1038/s41586-023-05984-y
+O2,no evidence,not reported,no molecular-oxygen inference,"Bean et al. 2023, Nature; Gagnebin et al. 2024",https://doi.org/10.1038/s41586-023-05984-y

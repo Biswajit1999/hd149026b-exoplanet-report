@@ -1,10 +1,20 @@
-# HD 149026 b — Real TESS Transit Report
+# HD 149026 b: Carbon Dioxide over a Giant Heavy-Element Core
 
+<!-- TARGET-IDENTITY-START -->
+<p align="center">
+  <img src="assets/artist_concept.webp" alt="Artist's interpretation of HD 149026 b near its host star" width="900">
+</p>
+
+<p align="center"><em>AI-generated artist's interpretation informed by the measured system properties; not a direct image.</em></p>
+
+**Dense hot Saturn · carbon dioxide · JWST context + TESS**
+
+A compact Saturn-mass planet with an unusually large heavy-element inventory, joining a TESS transit analysis to the published JWST CO₂ and H₂O interpretation.
+<!-- TARGET-IDENTITY-END -->
 <p align="center">
   <img src="figures/hd149026b_tess_transit.png" alt="Phase-folded real TESS transit light curve of HD 149026 b" width="760">
 </p>
 
-One real public TESS SPOC light curve; one historical NASA Exoplanet Archive ephemeris; one timing-adjusted, limb-darkened transit fit.
 
 **[Open the full report](https://biswajit1999.github.io/hd149026b-exoplanet-report/)** — the live GitHub Pages version.
 
@@ -20,6 +30,7 @@ One real public TESS SPOC light curve; one historical NASA Exoplanet Archive eph
 pip install -r requirements.txt
 python scripts/analyze_transit.py
 python scripts/analyze_multisector.py
+python scripts/analyze_atmospheric_evidence.py
 pytest tests/ -v
 ```
 
@@ -55,6 +66,23 @@ The archive prediction was timing-adjusted independently in 3 fitted sector(s) (
 
 The per-sector table is in [`figures/multisector_statistics.csv`](figures/multisector_statistics.csv). Regenerate all three figures with `python scripts/analyze_multisector.py`.
 <!-- MULTISECTOR-UPGRADE-END -->
+
+<!-- ATMOSPHERE-EVIDENCE-START -->
+## Atmospheric evidence: detection, limit, or unknown?
+
+<p align="center"><img src="figures/molecular_evidence.png" alt="Source-graded atmospheric evidence for HD 149026 b" width="820"></p>
+
+JWST/NIRCam measured CO2 and H2O absorption in this planet's dayside emission. Published retrieval and self-consistent-model studies disagree substantially on the inferred metallicity, so the report presents the molecules as supported while keeping the abundance interpretation model-dependent.
+
+| Species | Status | Evidence | Basis |
+|---|---|---|---|
+| CO2 | reported detection | strong 4.3-micron feature | JWST emission-spectrum modeling |
+| H2O | reported detection | absorption features | JWST emission-spectrum modeling |
+| VO | model-dependent hint | circumstantial | later self-consistent atmosphere models |
+| O2 | no evidence | not reported | no molecular-oxygen inference |
+
+Primary source: [Bean et al. 2023, Nature; Gagnebin et al. 2024](https://doi.org/10.1038/s41586-023-05984-y). The table is also available as [`data/atmospheric_evidence.csv`](data/atmospheric_evidence.csv). Oxygen-bearing species such as H2O, CO2, and SO2 are **not** evidence for molecular oxygen (O2) or a biosignature.
+<!-- ATMOSPHERE-EVIDENCE-END -->
 
 ## System context
 
