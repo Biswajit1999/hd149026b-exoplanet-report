@@ -1,4 +1,11 @@
 # HD 149026 b: Carbon Dioxide over a Giant Heavy-Element Core
+<!-- RESEARCH-IDENTITY-START -->
+**Independent research report by [Biswajit Jana](https://biswajit1999.github.io/Biswajit_Jana.github.io/)** · [Live report](https://biswajit1999.github.io/hd149026b-exoplanet-report/) · [ORCID](https://orcid.org/0009-0002-2411-1891) · [Complete research portfolio](https://biswajit1999.github.io/Biswajit_Jana.github.io/research/exoplanets/)
+<!-- RESEARCH-IDENTITY-END -->
+
+
+
+
 
 <!-- TARGET-IDENTITY-START -->
 <p align="center">
