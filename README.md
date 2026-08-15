@@ -20,6 +20,7 @@ ephemeris; one reproducible flat-versus-box statistical comparison.
 ```bash
 pip install -r requirements.txt
 python scripts/analyze_transit.py
+python scripts/analyze_multisector.py
 pytest tests/ -v
 ```
 
@@ -42,6 +43,20 @@ a two-level box whose depth is fitted. Timing and duration are not searched.
 The fixed-window box improves strongly on a flat light curve for these data. This establishes only how these archived fluxes compare with this
 pre-specified box model. It does not independently confirm the planet or identify
 an atmosphere.
+
+<!-- MULTISECTOR-UPGRADE-START -->
+## Multi-sector robustness and correlated noise
+
+The fixed archive ephemeris was fitted independently in 3 usable sector(s) (S24, S25, S52). Formal depth errors were inflated by sqrt(max(reduced chi-square, 1)) times the residual time-averaging beta factor (observed range 2.09-3.02). The robust inverse-variance depth is 2555.8 +/- 27.7 ppm; Cochran Q = 0.25 for 2 dof (p = 0.8842). These scaled errors address underestimated scatter and short-timescale correlation, but they are not a full Gaussian-process or physical limb-darkened transit fit.
+
+<p align="center"><img src="figures/hd149026b_multisector_transits.png" alt="Independent sector transit fits for HD 149026 b" width="760"></p>
+
+<p align="center"><img src="figures/hd149026b_depth_consistency.png" alt="Sector depth consistency for HD 149026 b" width="760"></p>
+
+<p align="center"><img src="figures/hd149026b_noise_diagnostics.png" alt="Residual RMS time-averaging diagnostic for HD 149026 b" width="760"></p>
+
+The per-sector table is in [`figures/multisector_statistics.csv`](figures/multisector_statistics.csv). Regenerate all three figures with `python scripts/analyze_multisector.py`.
+<!-- MULTISECTOR-UPGRADE-END -->
 
 ## System context
 
